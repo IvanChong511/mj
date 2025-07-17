@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+	<meta charset = "UTF-8">
+	<title> HOME </title>
+	<link rel = "stylesheet" href = "style.css">
+</head>
+
+
+<body>
+	<div class = "heading">
+		<div class = "website_logo">
+			<h1><p> LOGO. </p></h1>
+		</div>
+		<nav class = "menu">
+			<a href = "#" class = "link"> HOME </a>
+			<a href = "#" class = "link"> LEADERBOARD </a>
+			<a href = "#" class = "link"> FAN BIU </a>
+			<a href = "#" class = "link"> ABOUT </a>
+		</nav>
+		
+	</div>
+	<div class = "page">
+		
+		
+		
+		
+		
+	</div>
+	
+</body>
+
+
+
