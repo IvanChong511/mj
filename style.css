@@ -5,7 +5,21 @@
 		box-sizing: border-box;
 		font-family: "Poppins", serif;
 	}
+
 	body {
-		background : linear-gradient(to right, #e2e2e2, #c9d6ff);
+		background : linear-gradient(to right, #e2e2e2, #d2ffc1);
 		color: #333
 	}
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px 100px;
+        backdrop-filter: blur(10px); 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 99;
+    }
