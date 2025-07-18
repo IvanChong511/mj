@@ -43,13 +43,15 @@
 	// Show/hide table based on select value
 	const fanbiuSelect = document.getElementById('fanbiu-select');
 	const fanbiuTable = document.getElementById('fanbiu-table');
-	fanbiuSelect.addEventListener('change', function() {
-		if (this.value === 'newfanbiu') {
+	function updateTableDisplay() {
+		if (fanbiuSelect.value === 'newfanbiu') {
 			fanbiuTable.style.display = '';
 		} else {
 			fanbiuTable.style.display = 'none';
 		}
-	});
+	}
+	fanbiuSelect.addEventListener('change', updateTableDisplay);
+	window.addEventListener('DOMContentLoaded', updateTableDisplay);
 	</script>
 	
 	<form>
@@ -70,15 +72,14 @@
 
 	<main class="newfanbiu-content">
 		<form>
-			<select name = "fanbiu-name" required>
+			<select name = "fanbiu-name" id="fanbiu-select" required>
 				<option value = ""> --Select FANBIU-- </option>
 				<option value = "newfanbiu"> NEW </option>
 				<option value = "oldfanbiu"> OLD </option>
 				<option value = "3eastfanbiu"> 3-EAST </option>
 			</select>
 		</form>
-		
-		<table>
+		<table id="fanbiu-table" style="display:none;">
 			<tr>
 				<td>番種</td>
 				<td>番數</td>
