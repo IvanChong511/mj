@@ -9,8 +9,9 @@
 
 body {
     min-height: 100vh;
-    background: #fff; /* Set page background to white */
+    background: linear-gradient(to right, #e2e2e2, #d2ffc1);
     color: #333;
+    overflow: hidden;
 }
 
 .header {
@@ -23,10 +24,10 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 99;
-    background: #d2ffc1;   /* Light green header background */
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+    background: rgba(255, 255, 255, 0.3);   
+    backdrop-filter: blur(12px);            
+    -webkit-backdrop-filter: blur(12px);     
+    box-shadow: 0 2px 10px rgba(0,0,0,0.07);     
 }
 
 .menu a{
@@ -43,8 +44,27 @@ body {
 		
 }
 
-.main-content {
+.leaderboard-content,
+.fanbiu-content {
     margin-top: 90px;
     padding: 20px 100px;
     
+}
+
+
+.fanbiu-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.fanbiu-content table, 
+.fanbiu-content th, 
+.fanbiu-content td {
+    border: 1px solid #b2e6a1; /* Light green border */
+}
+
+.fanbiu-content tr:first-child {
+    background: #d2ffc1; /* Light green background for first row */
+    font-weight: bold;
 }
