@@ -44,25 +44,25 @@ body {
 }
 
 .leaderboard-content,
-.fanbiu-content {
+.newfanbiu-content {
     margin-top: 90px;
     padding: 20px 100px;
     
 }
 
-.fanbiu-content table {
+.newfanbiu-content table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
 }
 
-.fanbiu-content table, 
-.fanbiu-content th, 
-.fanbiu-content td {
+.newfanbiu-content table, 
+.newfanbiu-content th, 
+.newfanbiu-content td {
     border: 1px solid #b2e6a1; /* Light green border */
 }
 
-.fanbiu-content tr:first-child {
+.newfanbiu-content tr:first-child {
     background: #d2ffc1; /* Light green background for first row */
     font-weight: bold;
 }
