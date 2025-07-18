@@ -43,15 +43,13 @@
 	// Show/hide table based on select value
 	const fanbiuSelect = document.getElementById('fanbiu-select');
 	const fanbiuTable = document.getElementById('fanbiu-table');
-	function updateTableDisplay() {
-		if (fanbiuSelect.value === 'newfanbiu') {
-			fanbiuTable.style.display = '';
-		} else {
-			fanbiuTable.style.display = 'none';
-		}
-	}
-	fanbiuSelect.addEventListener('change', updateTableDisplay);
-	window.addEventListener('DOMContentLoaded', updateTableDisplay);
+	fanbiuSelect.addEventListener('change', function() {
+	    if (this.value === 'newfanbiu') {
+	        fanbiuTable.style.display = '';
+	    } else {
+	        fanbiuTable.style.display = 'none';
+	    }
+	});
 	</script>
 	
 	<form>
