@@ -43,20 +43,8 @@ body {
 		
 }
 
-.content-wrapper {
-    margin-top: 90px;  /* 90px 取决于 header 实际高度 */
-    display: flex;
-    justify-content: flex-start;
-    /* 可以加 min-height: calc(100vh - 90px); 保证底部不贴边 */
-}
-
-/* 有边框且内容不贴边 */
 .main-content {
-    border: 2px solid #b8e994;
-    border-radius: 16px;
-    background: rgba(255,255,255,0.7);
-    padding: 32px;
-    margin: 0 100px;      /* 左右与 header 保持一致 */
-    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.06);
-    /* 如需内容宽度更窄可加 max-width */
+    margin-top: 90px;
+    padding: 20px 100px;
+    
 }
