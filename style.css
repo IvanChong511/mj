@@ -50,19 +50,19 @@ body {
     
 }
 
-.main-content table {
+.fanbiu-content table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
 }
 
-.main-content table, 
-.main-content th, 
-.main-content td {
+.fanbiu-content table, 
+.fanbiu-content th, 
+.fanbiu-content td {
     border: 1px solid #b2e6a1; /* Light green border */
 }
 
-.main-content tr:first-child {
+.fanbiu-content tr:first-child {
     background: #d2ffc1; /* Light green background for first row */
     font-weight: bold;
 }
