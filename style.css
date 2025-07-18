@@ -69,10 +69,12 @@ body {
 
 select{
     width: 100%;
+    padding: 12px;
     background: #eee;
     border-radius: 6px;
     border: none;
     outline: none;
     font-size: 16px;
     color: #333;
+    margin-bottom: 10px;
 }
