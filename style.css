@@ -136,15 +136,3 @@ body {
     background: #d2ffc1; /* Light green background for first row */
     font-weight: bold;
 }
-
-select{
-    width: 100%;
-    padding: 12px;
-    background: #eee;
-    border-radius: 6px;
-    border: none;
-    outline: none;
-    font-size: 16px;
-    color: #333;
-    margin-bottom: 10px;
-}
