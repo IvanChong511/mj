@@ -30,19 +30,6 @@
 			<a href="about.html" class="drawer-link">ABOUT</a>
 		</div>
 	</header>
-
-	<!-- Photo Carousel Start -->
-	<div class="carousel">
-		<button class="carousel-arrow left" onclick="changeSlide(-1)">&#10094;</button>
-		<div class="carousel-images">
-			<img src="photos/photo1.jpg" class="carousel-img" style="display:block;">
-			<img src="photos/photo2.jpg" class="carousel-img">
-			<img src="photos/photo3.jpg" class="carousel-img">
-			<!-- Add more images as needed -->
-		</div>
-		<button class="carousel-arrow right" onclick="changeSlide(1)">&#10095;</button>
-	</div>
-	<!-- Photo Carousel End -->
 	<script>
 	const menuToggle = document.querySelector('.menu-toggle');
 	const drawer = document.getElementById('drawer');
@@ -54,27 +41,54 @@
 		drawer.classList.remove('open');
 	});
 	</script>
-
-	<script>
-	let currentSlide = 0;
-	const slides = document.querySelectorAll('.carousel-img');
-	function showSlide(n) {
-	  slides.forEach((img, i) => img.style.display = (i === n ? 'block' : 'none'));
-	}
-	function changeSlide(dir) {
-	  currentSlide = (currentSlide + dir + slides.length) % slides.length;
-	  showSlide(currentSlide);
-	}
-	showSlide(currentSlide);
-	</script>
+	<main class="web-carousel">
+	  <div class="carousel-container">
+		<button class="carousel-arrow left" onclick="changeSlide(-1)">&#10094;</button>
+		<div class="carousel-track">
+		  <div class="carousel-card">
+			<img src="photos/abc.jpg" alt="Photo 1" class="carousel-img">
+		  </div>
+		  <div class="carousel-card">
+			<img src="photos/def.jpg" alt="Photo 2" class="carousel-img">
+		  </div>
+		</div>
+		<button class="carousel-arrow right" onclick="changeSlide(1)">&#10095;</button>
+	  </div>
+	  <div class="carousel-dots">
+		<span class="dot active" onclick="goToSlide(0)"></span>
+		<span class="dot" onclick="goToSlide(1)"></span>
+	  </div>
+	
+	  <script>
+		let currentSlide = 0;
+		const cards = document.querySelectorAll('.carousel-card');
+		const dots = document.querySelectorAll('.dot');
+		function showSlide(n) {
+		  cards.forEach((card, i) => {
+			card.style.display = (i === n) ? 'flex' : 'none';
+		  });
+		  dots.forEach((dot, i) => {
+			dot.classList.toggle('active', i === n);
+		  });
+		}
+		function changeSlide(dir) {
+		  currentSlide = (currentSlide + dir + cards.length) % cards.length;
+		  showSlide(currentSlide);
+		}
+		function goToSlide(n) {
+		  currentSlide = n;
+		  showSlide(currentSlide);
+		}
+		showSlide(currentSlide);
+	  </script>
+	</main>
 	
 
 
 
 
 
-
-
+	</main>
 
 </body>
 
