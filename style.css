@@ -214,6 +214,9 @@ body {
   object-fit: cover;
   background: #eee;
 }
+.carousel-card {
+  position: relative;
+}
 .carousel-arrow {
   background: none;
   border: none;
@@ -228,11 +231,11 @@ body {
   box-shadow: none;
   line-height: 1;
 }
-.carousel-arrow.left {
-  left: 40px;
+.carousel-card .carousel-arrow.left {
+  left: 16px;
 }
-.carousel-arrow.right {
-  right: 40px;
+.carousel-card .carousel-arrow.right {
+  right: 16px;
 }
 .carousel-arrow:focus {
   outline: 2px solid #fff;
