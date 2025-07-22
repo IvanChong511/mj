@@ -120,22 +120,31 @@ body {
     
 }
 
-.newfanbiu-content button{
-		width: 100%;
-		padding: 12px;
-		background: #7494ec;
-		border-radius: 6px;
-		border: none;
-		outline: none;
-		font-size: 16px;
-		color: #fff;
-		font-weight: 500;
-		margin-bottom: 20px;
-		transition: 0.5s;
-		
-	}
-    
-.newfanbiu-content button:hover{
+
+.button-row {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    margin-bottom: 32px;
+}
+
+.button-row button {
+    flex: 1 1 0;
+    min-width: 120px;
+    max-width: 220px;
+    padding: 12px;
+    background: #7494ec;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+    transition: 0.5s;
+    margin-bottom: 0;
+}
+
+.button-row button:hover {
     text-decoration: underline;
     background: #6884d3;
 }
