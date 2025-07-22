@@ -80,6 +80,11 @@
 		  showSlide(currentSlide);
 		}
 		showSlide(currentSlide);
+
+		// Auto-slide every 10 seconds
+		setInterval(() => {
+		changeSlide(1);
+		}, 10000);
 	  </script>
 	</main>
 	
