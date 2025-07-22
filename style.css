@@ -133,12 +133,12 @@ body {
     min-width: 120px;
     max-width: 220px;
     padding: 12px;
-    background: #7494ec;
+    background: #d2ffc1;
     border-radius: 6px;
     border: none;
     outline: none;
     font-size: 16px;
-    color: #fff;
+    color: #000;
     font-weight: 500;
     transition: 0.5s;
     margin-bottom: 0;
@@ -146,7 +146,7 @@ body {
 
 .button-row button:hover {
     text-decoration: underline;
-    background: #6884d3;
+    background: #bde6ae;
 }
 
 .newfanbiu-content table {
