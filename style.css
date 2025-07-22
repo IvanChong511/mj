@@ -249,7 +249,7 @@ body {
 
 @media (max-width: 800px) {
   .carousel-container {
-    margin: 56px auto 0 auto;
+    margin: 140px auto 0 auto; /* Match desktop margin-top for header separation */
     min-height: unset;
     height: auto;
     padding: 0;
