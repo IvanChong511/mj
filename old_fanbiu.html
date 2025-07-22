@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+	<meta charset = "UTF-8">
+	<title> HOME </title>
+	<link rel = "stylesheet" href = "style.css">
+</head>
+
+
+<body>
+	<header class="header">
+		<h1>LOGO.</h1>
+		<nav class="menu">
+			<a href="index.html" class="link">HOME</a>
+			<a href="leaderboard.html" class="link">LEADERBOARD</a>
+			<a href="fanbiu.html" class="link">FAN BIU</a>
+			<a href="about.html" class="link">ABOUT</a>
+		</nav>
+		<button class="menu-toggle" aria-label="Open menu">
+			<span class="bar"></span>
+			<span class="bar"></span>
+			<span class="bar"></span>
+		</button>
+		<div class="drawer" id="drawer">
+			<button class="close-drawer" aria-label="Close menu">&times;</button>
+			<a href="index.html" class="drawer-link">HOME</a>
+			<a href="leaderboard.html" class="drawer-link">LEADERBOARD</a>
+			<a href="fanbiu.html" class="drawer-link">FAN BIU</a>
+			<a href="about.html" class="drawer-link">ABOUT</a>
+		</div>
+	</header>
+	<script>
+	const menuToggle = document.querySelector('.menu-toggle');
+	const drawer = document.getElementById('drawer');
+	const closeDrawer = document.querySelector('.close-drawer');
+	menuToggle.addEventListener('click', () => {
+		drawer.classList.add('open');
+	});
+	closeDrawer.addEventListener('click', () => {
+		drawer.classList.remove('open');
+	});
+	// Show/hide table based on select value
+	const fanbiuSelect = document.getElementById('fanbiu-select');
+	const fanbiuTable = document.getElementById('fanbiu-table');
+	fanbiuSelect.addEventListener('change', function() {
+		if (this.value === 'newfanbiu') {
+			fanbiuTable.style.display = '';
+		} else {
+			fanbiuTable.style.display = 'none';
+		}
+	});
+	</script>
+
+
+
+
+
+
+
+
+<main class="newfanbiu-content">
+	<div class="button-row">
+		<button onclick="window.location.href='fanbiu.html';">NEW</button>
+		<button onclick="window.location.href='old_fanbiu.html';">OLD</button>
+		<button onclick="window.location.href='3east_fanbiu.html';">3-EAST</button>
+	</div>
+	
+
+
+
+	
+	</main>
+
+
+
+
+
+</body>
+
