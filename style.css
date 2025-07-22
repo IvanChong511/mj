@@ -215,17 +215,31 @@ body {
   background: #eee;
 }
 .carousel-arrow {
-  background: #d2ffc1;
+  background: none;
   border: none;
-  font-size: 2em;
+  font-size: 2.5em;
+  color: #fff;
   cursor: pointer;
-  padding: 0 16px;
-  border-radius: 50%;
-  transition: background 0.2s;
-  z-index: 2;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  box-shadow: none;
+  line-height: 1;
+}
+.carousel-arrow.left {
+  left: 40px;
+}
+.carousel-arrow.right {
+  right: 40px;
+}
+.carousel-arrow:focus {
+  outline: 2px solid #fff;
 }
 .carousel-arrow:hover {
-  background: #bde6ae;
+  color: #fff;
+  background: none;
 }
 .carousel-dots {
   display: flex;

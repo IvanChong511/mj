@@ -42,18 +42,18 @@
 	});
 	</script>
 	<main class="web-carousel">
-	  <div class="carousel-container">
-		<button class="carousel-arrow left" onclick="changeSlide(-1)">&#10094;</button>
-		<div class="carousel-track">
-		  <div class="carousel-card">
-			<img src="photos/abc.jpg" alt="Photo 1" class="carousel-img">
-		  </div>
-		  <div class="carousel-card">
-			<img src="photos/def.jpg" alt="Photo 2" class="carousel-img">
-		  </div>
-		</div>
-		<button class="carousel-arrow right" onclick="changeSlide(1)">&#10095;</button>
+  <div class="carousel-container">
+	<div class="carousel-track">
+	  <button class="carousel-arrow left" onclick="changeSlide(-1)">&#10094;</button>
+	  <div class="carousel-card">
+		<img src="photos/abc.jpg" alt="Photo 1" class="carousel-img">
 	  </div>
+	  <div class="carousel-card">
+		<img src="photos/def.jpg" alt="Photo 2" class="carousel-img">
+	  </div>
+	  <button class="carousel-arrow right" onclick="changeSlide(1)">&#10095;</button>
+	</div>
+  </div>
 	  <div class="carousel-dots">
 		<span class="dot active" onclick="goToSlide(0)"></span>
 		<span class="dot" onclick="goToSlide(1)"></span>
