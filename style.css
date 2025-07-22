@@ -153,6 +153,11 @@ body {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
+    font-size: 16px;
+}
+
+.newfanbiu-content table, .newfanbiu-content th, .newfanbiu-content td {
+    font-size: 16px;
 }
 
 .newfanbiu-content table, 
