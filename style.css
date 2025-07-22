@@ -217,6 +217,8 @@ body {
 .carousel-card {
   position: relative;
 }
+
+/* Carousel arrows default (desktop) */
 .carousel-arrow {
   background: none;
   border: none;
@@ -243,6 +245,39 @@ body {
 .carousel-arrow:hover {
   color: #fff;
   background: none;
+}
+
+@media (max-width: 800px) {
+  .carousel-img {
+    height: 38vh;
+    max-height: 45vw;
+  }
+  .carousel-arrow {
+    font-size: 2em;
+    color: #333;
+    background: rgba(255,255,255,0.7);
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.10);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .carousel-card .carousel-arrow.left {
+    left: -18px;
+  }
+  .carousel-card .carousel-arrow.right {
+    right: -18px;
+  }
+  .carousel-card {
+    min-width: 96vw;
+    max-width: 98vw;
+    min-height: 40vh;
+    max-height: 60vh;
+  }
 }
 .carousel-dots {
   display: flex;
