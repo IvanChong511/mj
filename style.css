@@ -120,6 +120,26 @@ body {
     
 }
 
+.newfanbiu-content button{
+		width: 100%;
+		padding: 12px;
+		background: #7494ec;
+		border-radius: 6px;
+		border: none;
+		outline: none;
+		font-size: 16px;
+		color: #fff;
+		font-weight: 500;
+		margin-bottom: 20px;
+		transition: 0.5s;
+		
+	}
+    
+.newfanbiu-content button:hover{
+    text-decoration: underline;
+    background: #6884d3;
+}
+
 .newfanbiu-content table {
     width: 100%;
     border-collapse: collapse;
