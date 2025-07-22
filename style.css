@@ -188,7 +188,6 @@ body {
   justify-content: center;
   align-items: center;
 }
-.carousel-card {
   background: transparent;
   border-radius: 16px;
   box-shadow: none;
@@ -197,8 +196,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 70vw;
-  max-width: 90vw;
+  min-width: 90vw;
+  max-width: 98vw;
   min-height: unset;
   max-height: unset;
   justify-content: center;
@@ -279,8 +278,8 @@ body {
     right: -18px;
   }
   .carousel-card {
-    min-width: 98vw;
-    max-width: 99vw;
+    min-width: 99vw;
+    max-width: 100vw;
     min-height: unset;
     max-height: unset;
     height: auto;
