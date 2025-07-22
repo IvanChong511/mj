@@ -72,19 +72,31 @@
 		  });
 		}
 		function changeSlide(dir) {
-		  currentSlide = (currentSlide + dir + cards.length) % cards.length;
-		  showSlide(currentSlide);
+  currentSlide = (currentSlide + dir + cards.length) % cards.length;
+  showSlide(currentSlide);
+  resetAutoSlide();
 		}
 		function goToSlide(n) {
-		  currentSlide = n;
-		  showSlide(currentSlide);
+  currentSlide = n;
+  showSlide(currentSlide);
+  resetAutoSlide();
 		}
 		showSlide(currentSlide);
 
-		// Auto-slide every 10 seconds
-		setInterval(() => {
-		changeSlide(1);
+
+		// Auto-slide every 10 seconds, reset on manual change
+		let autoSlideTimer = null;
+		function startAutoSlide() {
+		autoSlideTimer = setInterval(() => {
+			currentSlide = (currentSlide + 1) % cards.length;
+			showSlide(currentSlide);
 		}, 10000);
+		}
+		function resetAutoSlide() {
+		if (autoSlideTimer) clearInterval(autoSlideTimer);
+		startAutoSlide();
+		}
+		startAutoSlide();
 	  </script>
 	</main>
 	
