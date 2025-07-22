@@ -10,26 +10,26 @@
 
 <body>
 	<header class="header">
-		<h1>LOGO.</h1>
-		<nav class="menu">
-			<a href="index.html" class="link">HOME</a>
-			<a href="leaderboard.html" class="link">LEADERBOARD</a>
-			<a href="fanbiu.html" class="link">FAN BIU</a>
-			<a href="about.html" class="link">ABOUT</a>
-		</nav>
-		<button class="menu-toggle" aria-label="Open menu">
-			<span class="bar"></span>
-			<span class="bar"></span>
-			<span class="bar"></span>
-		</button>
-		<div class="drawer" id="drawer">
-			<button class="close-drawer" aria-label="Close menu">&times;</button>
-			<a href="index.html" class="drawer-link">HOME</a>
-			<a href="leaderboard.html" class="drawer-link">LEADERBOARD</a>
-			<a href="fanbiu.html" class="drawer-link">FAN BIU</a>
-			<a href="about.html" class="drawer-link">ABOUT</a>
-		</div>
-	</header>
+        <h1>LOGO.</h1>
+        <nav class="menu">
+            <a href="index.html" class="link">HOME</a>
+            <a href="leaderboard.html" class="link">LEADERBOARD</a>
+            <a href="fanbiu.html" class="link">FAN BIU</a>
+            <a href="about.html" class="link">ABOUT</a>
+        </nav>
+        <button class="menu-toggle" aria-label="Open menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <div class="drawer" id="drawer">
+            <button class="close-drawer" aria-label="Close menu">&times;</button>
+            <a href="index.html" class="drawer-link">HOME</a>
+            <a href="leaderboard.html" class="drawer-link">LEADERBOARD</a>
+            <a href="fanbiu.html" class="drawer-link">FAN BIU</a>
+            <a href="about.html" class="drawer-link">ABOUT</a>
+        </div>
+    </header>
 	<script>
 	const menuToggle = document.querySelector('.menu-toggle');
 	const drawer = document.getElementById('drawer');
@@ -40,15 +40,633 @@
 	closeDrawer.addEventListener('click', () => {
 		drawer.classList.remove('open');
 	});
+	// Show/hide table based on select value
+	const fanbiuSelect = document.getElementById('fanbiu-select');
+	const fanbiuTable = document.getElementById('fanbiu-table');
+	fanbiuSelect.addEventListener('change', function() {
+	    if (this.value === 'newfanbiu') {
+	        fanbiuTable.style.display = '';
+	    } else {
+	        fanbiuTable.style.display = 'none';
+	    }
+	});
 	</script>
-	
-	<button onclick="window.location.href='3month.php';">3-Month</button>
-	<button onclick="window.location.href='1year.php';">1-Year</button>
-	<button onclick="window.location.href='3year.php';">3-Year</button>
+
+
+
+
+
+
+
+
+	<main class="newfanbiu-content">
+
+		<button onclick="window.location.href='fanbiu.html';">NEW</button>
+		<button onclick="window.location.href='old_fanbiu.html';">OLD</button>
+		<button onclick="window.location.href='3east_fanbiu.html';">3-EAST</button>
+
+
+
+
+
+		<table>
+			<tr>
+				<td>番種</td>
+				<td>番數</td>
+				<td>說明</td>
+			</tr>
+			<tr>
+				<td>無花/爛花</td>
+				<td>1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>正花</td>
+				<td>2</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>碰出東/南/西/北</td>
+				<td>1 -- 3</td>
+				<td>不是正風或正圈: 1番<br>正風或正圈: 2番<br>正風和正圈: 3番</td>
+			</tr>
+			<tr>
+				<td>碰出三元牌(中/發/白)</td>
+				<td>2</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>聽牌(叮)</td>
+				<td>5</td>
+				<td>聲明已經叫胡，不得轉章，不得摃牌可以睇其他家的牌</td>
+			</tr>
+			<tr>
+				<td>一發</td>
+				<td>5</td>
+				<td>叮牌後一巡内食胡或自摸，期間其他家不得上，碰或摃牌</td>
+			</tr>
+			<tr>
+				<td>天叮</td>
+				<td>50</td>
+				<td>莊家摸尾牌後立即叫胡</td>
+			</tr>
+			<tr>
+				<td>地叮</td>
+				<td>30</td>
+				<td>非莊家摸第一隻牌後立即叫胡</td>
+			</tr>
+			<tr>
+				<td>雞胡</td>
+				<td>25</td>
+				<td>胡出時(不計莊)只得一番(番子必須做眼/自摸和叮不算)<br>🀒🀓🀔🀇🀇🀇🀉🀉🀉🀌🀍🀎🀚🀛🀅🀅  🀙</td>
+			</tr>
+			<tr>
+				<td>對碰</td>
+				<td>1</td>
+				<td>在下列例子，對碰一萬及發財<br>🀒🀓🀔🀇🀇🀉🀉🀉🀌🀍🀎🀙🀚🀛🀅🀅  🀇</td>
+			</tr>
+			<tr>
+				<td>假獨</td>
+				<td>1</td>
+				<td>可以砌到叫單吊或叫偏章(一定要叫兩飛)<br>在下列例子，食一索就是假獨，四索就不是假獨：<br>🀐🀐🀑🀒🀇🀇🀇🀉🀉🀉🀙🀚🀛🀅🀅🀅  🀐</td>
+			</tr>
+			<tr>
+				<td>獨獨</td>
+				<td>2</td>
+				<td>單吊或叫偏章<br>🀐🀒🀇🀇🀇🀉🀉🀉🀌🀍🀎🀙🀚🀛🀅🀅  🀑</td>
+			</tr>
+			<tr>
+				<td>平胡</td>
+				<td>5</td>
+				<td>全副牌 (眼除外) 都由順子組成<br>🀐🀑🀒🀒🀓🀔🀇🀈🀉🀌🀍🀎🀙🀚🀛🀅🀅</td>
+			</tr>
+			<tr>
+				<td>將眼</td>
+				<td>1</td>
+				<td>以一對二、五或八做眼<br>🀐🀑🀒🀒🀓🀔🀇🀈🀉🀌🀍🀎🀙🀚🀛🀝🀝</td>
+			</tr>
+			<tr>
+				<td>老少</td>
+				<td>3</td>
+				<td>同色123 + 789 或 111 + 999<br>🀐🀑🀒🀖🀗🀘 / 🀇🀇🀇🀏🀏🀏</td>
+			</tr>
+			<tr>
+				<td>無字</td>
+				<td>1</td>
+				<td>沒有番子</td>
+			</tr>
+			<tr>
+				<td>無字花</td>
+				<td>5</td>
+				<td>沒有番子及沒有花</td>
+			</tr>
+			<tr>
+				<td>無字花大平胡</td>
+				<td>15</td>
+				<td>沒有番子，沒有花，又是平胡</td>
+			</tr>
+			<tr>
+				<td>門清</td>
+				<td>5</td>
+				<td>門前清(明/暗槓亦可)</td>
+			</tr>
+			<tr>
+				<td>海底撈月/撈魚</td>
+				<td>20</td>
+				<td>最後一隻自摸或出沖</td>
+			</tr>
+			<tr>
+				<td>自摸</td>
+				<td>1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>門清自摸</td>
+				<td>5</td>
+				<td>門前清自摸</td>
+			</tr>
+			<tr>
+				<td>明摃/暗摃</td>
+				<td>1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>花上自摸</td>
+				<td>1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>摃上自摸</td>
+				<td>1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>搶摃食胡</td>
+				<td>1</td>
+				<td>搶摃不當自摸，搶摃只當是被搶那家出沖，不過加一番</td>
+			</tr>
+			<tr>
+				<td>摃上摃自摸</td>
+				<td>30</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>搶摃上摃食胡</td>
+				<td>30</td>
+				<td>也是不當自摸，當摃上摃的那家出沖，加三十番</td>
+			</tr>
+			<tr>
+				<td>二暗刻</td>
+				<td>5</td>
+				<td>刻子就是三隻一樣的牌<br>明摃、暗摃或在自己手上三隻一樣的牌叫做暗刻<br>🀒🀓🀔🀇🀇🀇🀉🀉🀉🀌🀍🀎🀙🀚🀛🀅🀅  </td>
+			</tr>
+			<tr>
+				<td>三暗刻</td>
+				<td>15</td>
+				<td>手裡三個刻子<br>🀐🀐🀐🀇🀇🀇🀉🀉🀉🀌🀍🀎🀙🀚🀛🀅🀅 </td>
+			</tr>
+			<tr>
+				<td>四暗刻</td>
+				<td>30</td>
+				<td>手裡四個刻子<br>🀐🀐🀐🀇🀇🀇🀉🀉🀉🀌🀍🀎🀝🀝🀝🀅🀅 </td>
+			</tr>
+			<tr>
+				<td>五暗刻</td>
+				<td>80</td>
+				<td>手裡五個刻子<br>🀐🀐🀐🀇🀇🀇🀉🀉🀉🀌🀌🀌🀝🀝🀝🀅🀅 </td>
+			</tr>
+			<tr>
+				<td>坎坎胡</td>
+				<td>100</td>
+				<td> 自摸五暗刻(不可以摃)</td>
+			</tr>
+			<tr>
+				<td>般高</td>
+				<td>5</td>
+				<td>兩個一樣的順子<br>🀒🀓🀔🀒🀓🀔</td>
+			</tr>
+			<tr>
+				<td>三般高</td>
+				<td>15</td>
+				<td>三個一樣的順子<br>🀒🀓🀔🀒🀓🀔🀒🀓🀔</td>
+			</tr>
+			<tr>
+				<td>四般高</td>
+				<td>30</td>
+				<td>四個一樣的順子<br>🀒🀓🀔🀒🀓🀔🀒🀓🀔🀒🀓🀔</td>
+			</tr>
+			<tr>
+				<td>相逢</td>
+				<td>2</td>
+				<td>二個款式不同的但數字一樣順子</td>
+			</tr>
+			<tr>
+				<td>明三相逢</td>
+				<td>10</td>
+				<td>三個款式不同的但數字一樣順子<br>🀐🀑🀒🀇🀈🀉🀙🀚🀛</td>
+			</tr>
+			<tr>
+				<td>暗三相逢</td>
+				<td>15</td>
+				<td>三個款式不同的但數字一樣順子，全部是是手裡的(食出當暗) </td>
+			</tr>
+			<tr>
+				<td>明四同順</td>
+				<td>20</td>
+				<td>四個數字一樣順子，不論款式，不再計三相逢/般高/三般高 <br>🀐🀑🀒🀇🀈🀉🀙🀚🀛🀙🀚🀛</td>
+			</tr>
+			<tr>
+				<td>暗四同順</td>
+				<td>30</td>
+				<td>四個數字一樣順子，不論款式，不再計三相逢/般高/三般高，全部是是手裡的(食出當暗) </td>
+			</tr>
+			<tr>
+				<td>明五同順</td>
+				<td>40</td>
+				<td>五個數字一樣順子，不論款式，不再計三相逢/般高/三般高<br>🀐🀑🀒🀇🀈🀉🀇🀈🀉🀙🀚🀛🀙🀚🀛</td>
+			</tr>
+			<tr>
+				<td>暗五同順</td>
+				<td>60</td>
+				<td>五個數字一樣順子，不論款式，不再計三相逢/般高/三般高，全部是是手裡的(食出當暗)  </td>
+			</tr>
+			<tr>
+				<td>全姊妹</td>
+				<td>15</td>
+				<td>只有一或兩種數字組合的順子 (必須是平胡)<br>🀐🀑🀒🀇🀈🀉🀙🀚🀛🀒🀓🀔🀉🀊🀋🀅🀅</td>
+			</tr>
+			<tr>
+				<td>兄弟</td>
+				<td>3</td>
+				<td>兩款數字一樣的刻子<br>🀐🀐🀐🀇🀇🀇</td>
+			</tr>
+			<tr>
+				<td>小三兄弟</td>
+				<td>8</td>
+				<td>二兄弟再加上另一個兄弟做眼<br>🀐🀐🀐🀇🀇🀇🀙🀙</td>
+			</tr>
+			<tr>
+				<td>大三兄弟</td>
+				<td>15</td>
+				<td>三款數字一樣的刻子<br>🀐🀐🀐🀇🀇🀇🀙🀙🀙</td>
+			</tr>
+			<tr>
+				<td>姊妹</td>
+				<td>3</td>
+				<td>兩副同款而數子相連樣的刻子<br>🀐🀐🀐🀑🀑🀑</td>
+			</tr>
+			<tr>
+				<td>小三姊妹</td>
+				<td>8</td>
+				<td>兩副同款而數子相連樣的刻子加一對數子相連的眼<br>🀐🀐🀐🀑🀑🀑🀒🀒</td>
+			</tr>
+			<tr>
+				<td>大三姊妹</td>
+				<td>15</td>
+				<td>三副同款而數子相連樣的刻子<br>🀐🀐🀐🀑🀑🀑🀒🀒🀒</td>
+			</tr>
+			<tr>
+				<td>小四姊妹</td>
+				<td>20</td>
+				<td>三副同款而數子相連樣的刻子加一對數子相連的眼<br>🀐🀐🀐🀑🀑🀑🀒🀒🀒🀓🀓</td>
+			</tr>
+			<tr>
+				<td>大四姊妹</td>
+				<td>30</td>
+				<td>四副同款而數子相連樣的刻子<br>🀐🀐🀐🀑🀑🀑🀒🀒🀒🀓🀓🀓</td>
+			</tr>
+			<tr>
+				<td>小五姊妹</td>
+				<td>60</td>
+				<td>四副同款而數子相連樣的刻子加一對數子相連的眼<br>🀐🀐🀐🀑🀑🀑🀒🀒🀒🀓🀓🀓🀔🀔</td>
+			</tr>
+			<tr>
+				<td>大五姊妹</td>
+				<td>80</td>
+				<td>五副同款而數子相連樣的刻子<br>🀐🀐🀐🀑🀑🀑🀒🀒🀒🀓🀓🀓🀔🀔🀔</td>
+			</tr>
+			<tr>
+				<td>一炮雙響</td>
+				<td>10</td>
+				<td>出沖兩家</td>
+			</tr>
+			<tr>
+				<td>一炮三響</td>
+				<td>20</td>
+				<td>出沖三家</td>
+			</tr>
+			<tr>
+				<td>明四歸一</td>
+				<td>5</td>
+				<td>用盡同一隻牌的四隻牌，分成兩坎<br>🀐🀐🀐 🀐🀑🀒</td>
+			</tr>
+			<tr>
+				<td>暗四歸一</td>
+				<td>10</td>
+				<td>用盡同一隻牌的四隻牌，分成兩坎(四隻牌都要在手中)</td>
+			</tr>
+			<tr>
+				<td>明四歸二</td>
+				<td>10</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>暗四歸二</td>
+				<td>20</td>
+				<td>用盡同一隻牌的四隻牌，分成兩坎加一對眼(四隻牌都要在手中)</td>
+			</tr>
+			<tr>
+				<td>明四歸四</td>
+				<td>20</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>暗四歸四</td>
+				<td>40</td>
+				<td>用盡同一隻牌的四隻牌，分成四坎(四隻牌都要在手中)</td>
+			</tr>
+			<tr>
+				<td>明清龍</td>
+				<td>10</td>
+				<td>同一個款式，只有一至九<br>🀇🀈🀉🀊🀋🀌🀍🀎🀏</td>
+			</tr>
+			<tr>
+				<td>暗清龍</td>
+				<td>20</td>
+				<td>同一個款式，只有一至九，全部是是手裡的(食出當暗) </td>
+			</tr>
+			<tr>
+				<td>明雜龍</td>
+				<td>8</td>
+				<td>齊三個款式，只有一至九<br>🀇🀈🀉🀓🀔🀕🀟🀠🀡</td>
+			</tr>
+			<tr>
+				<td>暗雜龍</td>
+				<td>15</td>
+				<td>齊三個款式，只有一至九，全部是是手裡的(食出當暗) </td>
+			</tr>
+			<tr>
+				<td>明清步高</td>
+				<td>10</td>
+				<td>同一個款式，三副依次遞增一位序數的順子<br>🀇🀈🀉🀈🀉🀊🀉🀊🀋</td>
+			</tr>
+			<tr>
+				<td>暗清步高</td>
+				<td>20</td>
+				<td>同一個款式，三副依次遞增一位序數的順子，全部是是手裡的(食出當暗) </td>
+			</tr>
+			<tr>
+				<td>明雜步高</td>
+				<td>5</td>
+				<td>齊三個款式，三副依次遞增一位序數的順子<br>🀇🀈🀉🀑🀒🀓🀛🀜🀝</td>
+			</tr>
+			<tr>
+				<td>暗雜步高</td>
+				<td>10</td>
+				<td>齊三個款式，三副依次遞增一位序數的順子，全部是是手裡的(食出當暗) </td>
+			</tr>
+			<tr>
+				<td>一箭穿雲</td>
+				<td>20</td>
+				<td>全副牌依次遞增一位序數的順子<br>🀇🀈🀉🀈🀉🀊🀉🀊🀋🀊🀋🀌🀋🀌🀍  / 🀇🀈🀉🀑🀒🀓🀛🀜🀝🀊🀋🀌🀔🀕🀖</td>
+			</tr>
+			<tr>
+				<td>小五門齊</td>
+				<td>10</td>
+				<td>東南西北為一門，中發白為一門，筒索萬各三門。全副牌五門都有齊<br>🀇🀈🀉🀉🀊🀋🀑🀒🀓🀛🀜🀝🀁🀁🀁🀅🀅</td>
+			</tr>
+			<tr>
+				<td>大五門齊</td>
+				<td>15</td>
+				<td>五門都需要成坎<br>🀇🀈🀉🀉🀉🀑🀒🀓🀛🀜🀝🀁🀁🀁🀅🀅🀅</td>
+			</tr>
+			<tr>
+				<td>小七門齊</td>
+				<td>15</td>
+				<td>東南西北為一門，中發白為一門，筒索萬各三門加上兩種不同顏色的花<br>🀇🀈🀉🀉🀊🀋🀑🀒🀓🀛🀜🀝🀁🀁🀁🀅🀅  🀢🀦</td>
+			</tr>
+			<tr>
+				<td>大七門齊</td>
+				<td>25</td>
+				<td>五門都需要成坎加上兩種不同顏色的花<br>🀇🀈🀉🀉🀉🀑🀒🀓🀛🀜🀝🀁🀁🀁🀅🀅🀅  🀢🀦</td>
+			</tr>
+			<tr>
+				<td>缺一門</td>
+				<td>5</td>
+				<td>不計番子而缺少筒、索或萬一門<br>🀇🀈🀉🀈🀉🀊🀉🀊🀋🀑🀒🀓🀔🀕🀖🀗🀗</td>
+			</tr>
+			<tr>
+				<td>混一色</td>
+				<td>30</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>清一色</td>
+				<td>80</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>對對胡</td>
+				<td>30</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>全求人</td>
+				<td>20</td>
+				<td>全副牌落地，單吊而其他家打出胡牌(有槓不可)</td>
+			</tr>
+			<tr>
+				<td>半求人</td>
+				<td>10</td>
+				<td>全副牌落地，單吊而自摸(有槓不可)</td>
+			</tr>
+			<tr>
+				<td>四只内</td>
+				<td>80</td>
+				<td>地下只有四隻牌內食胡(算至第四隻)，不計上及碰了的牌</td>
+			</tr>
+			<tr>
+				<td>七只內</td>
+				<td>20</td>
+				<td>地下只有七隻牌內食胡(算至第七隻)，不計上及碰了的牌</td>
+			</tr>
+			<tr>
+				<td>十只內</td>
+				<td>10</td>
+				<td>地下只有十隻牌內食胡(算至第十隻)，不計上及碰了的牌</td>
+			</tr>
+			<tr>
+				<td>小三元</td>
+				<td>30</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>大三元</td>
+				<td>60</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>小三風</td>
+				<td>15</td>
+				<td>可計算字的番數</td>
+			</tr>
+			<tr>
+				<td>大三風</td>
+				<td>30</td>
+				<td>可計算字的番數</td>
+			</tr>
+			<tr>
+				<td>小四喜</td>
+				<td>60</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>大四喜</td>
+				<td>80</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>十三么</td>
+				<td>100</td>
+				<td>另三隻是自己摸回來的順子或暗刻，不能上或碰回來<br>🀀🀁🀂🀃🀄🀅🀆🀇🀏🀐🀘🀙🀡🀡🀈🀉🀊</td>
+			</tr>
+			<tr>
+				<td>十六不搭</td>
+				<td>40</td>
+				<td>東南西北中發白，其他三門每樣三隻，但不能搭上，例如149/258，再加一對眼<br>🀀🀁🀂🀃🀄🀅🀆🀇🀊🀏🀐🀕🀘🀙🀝🀡🀡</td>
+			</tr>
+			<tr>
+				<td>純正十六不搭</td>
+				<td>60</td>
+				<td>其他三門必定是147,258,369和番子做眼<br>🀀🀁🀂🀃🀄🀅🀆🀆🀇🀊🀍🀚🀝🀠🀒🀕🀘</td>
+			</tr>
+			<tr>
+				<td>嚦咕嚦咕</td>
+				<td>40</td>
+				<td>八對子 (三隻一樣的不能碰出)<br>🀁🀁🀅🀅🀇🀇🀋🀋🀕🀕🀘🀘🀝🀝🀡🀡🀡</td>
+			</tr>
+			<tr>
+				<td>一台花</td>
+				<td>10</td>
+				<td>四隻同色的花<br>🀢🀣🀤🀥</td>
+			</tr>
+			<tr>
+				<td>兩台花 (花胡)</td>
+				<td>60</td>
+				<td>立刻食胡當自摸(可拉)<br>🀦🀧🀨🀩🀢🀣🀤🀥</td>
+			</tr>
+			<tr>
+				<td>七搶一</td>
+				<td>30</td>
+				<td>自己有六隻花, 其中一家有一隻花, 自己摸最後一隻(可拉)</td>
+			</tr>
+			<tr>
+				<td>一搶七</td>
+				<td>30</td>
+				<td>其中一家有七隻花, 自己摸最後一隻(可拉)</td>
+			</tr>
+			<tr>
+				<td>斷么</td>
+				<td>5</td>
+				<td>全副牌沒有么九及番子<br>🀈🀉🀊🀉🀊🀋🀑🀒🀓🀛🀜🀝🀕🀕🀕</td>
+			</tr>
+			<tr>
+				<td>混帶么</td>
+				<td>20</td>
+				<td>全副牌每一組合都有么九或番子<br>🀁🀁🀁🀅🀅🀅🀇🀈🀉🀍🀎🀏🀡🀡🀡🀐🀐</td>
+			</tr>
+			<tr>
+				<td>全帶么</td>
+				<td>40</td>
+				<td>全副牌每一組合都有么九加無番子<br>🀇🀈🀉🀍🀎🀏🀏🀏🀐🀑🀒🀙🀚🀛🀙🀚🀛</td>
+			</tr>
+			<tr>
+				<td>混老頭</td>
+				<td>30</td>
+				<td>全副牌都是么九及番子<br>🀁🀁🀁🀅🀅🀅🀆🀆🀆🀇🀇🀇🀏🀏🀏🀐🀐</td>
+			</tr>
+			<tr>
+				<td>清老頭</td>
+				<td>80</td>
+				<td>全副牌都是么九<br>🀇🀇🀇🀏🀏🀏🀙🀙🀙🀡🀡🀡🀐🀐🀐🀘🀘</td>
+			</tr>
+			<tr>
+				<td>混帶X</td>
+				<td>20</td>
+				<td>全副牌每一組合都有同一數字或番子<br>🀁🀁🀁🀅🀅🀅🀇🀈🀉🀑🀑🀑🀒🀓🀙🀚🀛</td>
+			</tr>
+			<tr>
+				<td>全帶X</td>
+				<td>50</td>
+				<td>全副牌每一組合都有同一數字<br>🀇🀈🀉🀉🀉🀑🀒🀓🀒🀒🀒🀙🀚🀛🀛🀜🀝</td>
+			</tr>
+			<tr>
+				<td>缺五</td>
+				<td>5</td>
+				<td>全副牌沒有五和番子<br>🀇🀈🀉🀉🀉🀑🀒🀓🀒🀒🀒🀙🀚🀛🀟🀠🀡</td>
+			</tr>
+			<tr>
+				<td>天胡</td>
+				<td>100</td>
+				<td> 莊家一開牌補花後即吃糊 (開牌開槓後吃糊唔計天糊)</td>
+			</tr>
+			<tr>
+				<td>地胡</td>
+				<td>90</td>
+				<td> 莊家打出第一隻牌出沖給其他家</td>
+			</tr>
+			<tr>
+				<td>雙吃</td>
+				<td>　     /</td>
+				<td>算兩副牌吃</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>下列項目需即時付錢：</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>追</td>
+				<td>一底</td>
+				<td>四家打同一隻牌，第一家俾其他三家每人一個底</td>
+			</tr>
+			<tr>
+				<td>補摃</td>
+				<td>2番</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>暗摃</td>
+				<td>一底</td>
+				<td>暗摃在完結時須打開讓其他家知道</td>
+			</tr>
+			<tr>
+				<td>一二三</td>
+				<td>俾一底 x 3</td>
+				<td>做莊擲骰，擲到一二三，俾其他三家每人一個底</td>
+			</tr>
+			<tr>
+				<td>圍骰</td>
+				<td>收一底 x 3</td>
+				<td>做莊擲骰，擲到圍骰，其他三家每人俾莊家一個底</td>
+			</tr>
+			<tr>
+				<td>詐胡</td>
+				<td>俾30番 x 3</td>
+				<td></td>
+			</tr>
+			</table>
+		</table>
+	</main>
+
+
 
 
 
 </body>
-
-
 
