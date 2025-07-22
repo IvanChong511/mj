@@ -30,6 +30,19 @@
 			<a href="about.html" class="drawer-link">ABOUT</a>
 		</div>
 	</header>
+
+	<!-- Photo Carousel Start -->
+	<div class="carousel">
+		<button class="carousel-arrow left" onclick="changeSlide(-1)">&#10094;</button>
+		<div class="carousel-images">
+			<img src="photos/photo1.jpg" class="carousel-img" style="display:block;">
+			<img src="photos/photo2.jpg" class="carousel-img">
+			<img src="photos/photo3.jpg" class="carousel-img">
+			<!-- Add more images as needed -->
+		</div>
+		<button class="carousel-arrow right" onclick="changeSlide(1)">&#10095;</button>
+	</div>
+	<!-- Photo Carousel End -->
 	<script>
 	const menuToggle = document.querySelector('.menu-toggle');
 	const drawer = document.getElementById('drawer');
@@ -40,6 +53,19 @@
 	closeDrawer.addEventListener('click', () => {
 		drawer.classList.remove('open');
 	});
+	</script>
+
+	<script>
+	let currentSlide = 0;
+	const slides = document.querySelectorAll('.carousel-img');
+	function showSlide(n) {
+	  slides.forEach((img, i) => img.style.display = (i === n ? 'block' : 'none'));
+	}
+	function changeSlide(dir) {
+	  currentSlide = (currentSlide + dir + slides.length) % slides.length;
+	  showSlide(currentSlide);
+	}
+	showSlide(currentSlide);
 	</script>
 	
 
