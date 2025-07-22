@@ -248,6 +248,12 @@ body {
 }
 
 @media (max-width: 800px) {
+  .carousel-container {
+    margin: 70px auto 0 auto;
+    min-height: unset;
+    height: auto;
+    padding: 0;
+  }
   .carousel-img {
     height: 38vh;
     max-height: 320px;
@@ -273,10 +279,13 @@ body {
     right: -18px;
   }
   .carousel-card {
-    min-width: 96vw;
-    max-width: 98vw;
-    min-height: 40vh;
-    max-height: 60vh;
+    min-width: 98vw;
+    max-width: 99vw;
+    min-height: unset;
+    max-height: unset;
+    height: auto;
+    margin: 0 2px;
+    padding: 0;
   }
 }
 .carousel-dots {
